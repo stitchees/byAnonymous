@@ -1,0 +1,69 @@
+﻿:root {
+    --color-1: #fcf6e8;
+    --color-2: #dbcfc3;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card {
+    width: 400px;
+    z-index: 5;
+}
+
+body {
+    background-color: rgba(219, 207, 195,.75);
+    background-image: url("/images/patternpad.svg");
+    background-repeat: repeat-x;
+    background-size: 25em;
+    background-clip: border-box;
+    background-position-y: 100%;
+}
+
+.card {
+    background-color: #FCF6E8;
+    font-weight: bold;
+    border-radius: 0;
+    box-shadow: .5em .5em 0 0 black;
+}
+
+h1 {
+    font-weight: bold;
+    color: black
+}
+
+.form-custom {
+    background-color: var(--color-1);
+    border: .1em solid var(--color-2);
+    border-radius: 0;
+    transition: linear all .2s;
+}
+
+.form-control.form-custom:focus {
+    border: .1em solid black;
+    border-radius: 0;
+    box-shadow: .25em .25em 0 0 black
+}
+
+.form-check-input.form-custom:focus {
+    box-shadow: none;
+}
+
+.form-check-input.form-custom:checked {
+    background-color: grey;
+    border: none;
+    box-shadow: .15em .15em 0 0 black
+}
+
+.form-error {
+    color: red;
+}

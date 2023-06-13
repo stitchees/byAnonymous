@@ -1,8 +1,65 @@
-﻿@{
+﻿@model GrupoAzureWebIII.ViewModels.FormViewModel
+
+@{
     ViewData["Title"] = "Home Page";
+    var mensajeError = ViewBag.mensajeError;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+@using (Html.BeginForm("EnviarMensaje","Home", FormMethod.Post))
+{
+    <h1 class="">Tu Secr3to</h1>
+
+    <div class="container d-flex justify-content-center">
+        <div class="card border-4 border-dark">
+            
+            
+            @if (mensajeError != null)
+            {
+                <div class="alert alert-danger mx-3 mt-3">@mensajeError</div>
+            }
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    @Html.TextAreaFor(f => f.mensaje, new { @class = "form-control form-custom" })
+                    @Html.ValidationMessageFor( f => f.mensaje, "", new{ @class="bg-danger rounded text-center text-light mt-2 d-block"})
+                </div>
+                <div class="mb-3">
+                    <label for="apodo" class="form-label">Apodo(opcional):</label>
+                    @Html.TextBoxFor(f => f.apodo, new { @class = "form-control form-custom" })
+                </div>
+                <div class="mb-3">
+                    El mensaje anónimo llegará por:
+                    <div class="form-check ms-1">
+                        @Html.CheckBoxFor(f => f.publicarTwitter, new { @class = "form-check-input form-custom" })
+                        <label class="form-check-label" for="publicarTwitter">Publicar en Twitter</label>
+                    </div>
+
+                    <div class="form-check ms-1">
+                        @Html.CheckBoxFor(f => f.publicarEmail, new { @class = "form-check-input form-custom" })
+                        <label class="form-check-label" for="enviarEmail">Enviar por correo electrónico</label>
+                    </div>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="user" class="form-label">Usuario/E-mail:</label>
+                    @Html.TextBoxFor(f => f.user,new {placeholder = "Usuario de Twitter sin @", @class="form-control form-custom" })
+
+                </div>
+                <button type="submit" class="btn btn-lg btn-outline-dark border-5 w-100 fw-bold">Enviar</button>
+
+
+            </div>
+        </div>
+    </div>
+    
+
+}

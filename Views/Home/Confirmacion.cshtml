@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Confirmación";
+    var mensajeEstado = TempData["mensajeEstado"];
+    @model List<Mensaje>;
+}
+
+
+<h1>Confirmación de Envio </h1>
+@if (mensajeEstado != null)
+{
+    <div class="alert alert-success mx-3 mt-3 text-center">@mensajeEstado</div>
+}
+else
+{
+    <div class="alert alert-warning mx-3 mt-3 text-center">No hay nada por confirmar.</div>
+}
+
+<button onclick="location.href='@Url.Action("Index", "Home")'" class="btn btn-outline-dark w-100 fw-bold">¡Volver a publicar o enviar un mensaje!</button>
+
+
+
+
