@@ -1,7 +1,7 @@
-﻿using GrupoAzureWebIII.Models;
-using GrupoAzureWebIII.ViewModels;
+﻿using byAnonymous.Models;
+using byAnonymous.ViewModels;
 
-namespace GrupoAzureWebIII.Services
+namespace byAnonymous.Services
 {
     public class DbService
     {

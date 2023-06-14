@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace GrupoAzureWebIII.ViewModels
+namespace byAnonymous.ViewModels
 {
     public class FormViewModel
     {

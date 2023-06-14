@@ -4,7 +4,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
-namespace GrupoAzureWebIII.Services
+namespace byAnonymous.Services
 {
     public class EmailService
     {

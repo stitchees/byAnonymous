@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace GrupoAzureWebIII.Models
+namespace byAnonymous.Models
 {
     public class MensajeDbContext : DbContext
     {

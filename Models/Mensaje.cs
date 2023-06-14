@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace GrupoAzureWebIII.Models
+namespace byAnonymous.Models
 {
     public class Mensaje
     {

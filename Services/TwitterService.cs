@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 
-namespace GrupoAzureWebIII
+namespace byAnonymous
 {
     public class TwitterService
     {

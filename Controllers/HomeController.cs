@@ -1,13 +1,13 @@
-﻿using GrupoAzureWebIII.Models;
+﻿using byAnonymous.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Text.Json;
 using System.Text;
-using GrupoAzureWebIII.ViewModels;
-using GrupoAzureWebIII.Services;
+using byAnonymous.ViewModels;
+using byAnonymous.Services;
 using Microsoft.IdentityModel.Tokens;
 
-namespace GrupoAzureWebIII.Controllers
+namespace byAnonymous.Controllers
 {
     public class HomeController : Controller
     {
